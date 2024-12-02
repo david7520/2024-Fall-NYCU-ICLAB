@@ -109,5 +109,5 @@ source ./my_command/process_17.cmd
 ```bash
 source ./my_command/process_19to20.cmd
 ```
-# === Area Report ===
-You can check Area in summaryReport.rpt file.
+=== Area Report ===
+You can check Area in summaryReport.rpt file, I have already written down the command in process_19to20.cmd.
