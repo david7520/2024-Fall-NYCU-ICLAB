@@ -18,9 +18,9 @@ Don't forget to change the content in LEF file:
 
 ## (Automatic Placement & Route) APR's procedure
 
-**1. Data Preparation**
+**2. Data Preparation**
 
-> According to the content in `CHIP.io` to add pad set in `CHIP_SHELL.v`. and then `./00_combine`.
+> please run “./00_combine” to combine the TMIP_SYN.v with CHIP_SHELL.v to be CHIP_SYN.v
 
 Invoke innovus
 
@@ -33,11 +33,12 @@ source ./my_command/run_apr.cmd
 **3. Specify Chip Floorplan**
 
 ```bash
-floorPlan -site core_5040 -r 1 0.88 250 250 250 250
+floorPlan -site core_5040 -r 1 0.60 100 100 100 100
 ```
-> `1` is the Ratio(H/W), `0.88` is the Core Utillization
-
-and then manually place the SRAM marco in Core.
+> Specify core size
+> :a. Core Utilization: Set any as your wish (0.7~0.8 is suggested)
+> 3. Specify core margin
+> manually place the SRAM marco in Core
 
 **4. Connect / Define Global Net**
 
