@@ -33,9 +33,14 @@ source ./my_command/run_apr.cmd
 **3. Specify Chip Floorplan**
 
 1. Specify core size
-> :a. Core Utilization: Set any as your wish (0.7~0.8 is suggested)
+> a. Core Utilization: Set any as your wish (0.7~0.8 is suggested)
 2. Specify core margin
-> manually place the SRAM marco in Core
+> b. ◆ Core to IO Boundary
+Core to Left: 100
+Core to Right: 100
+Core to Top: 100
+Core to Bottom: 100
+3. manually place the SRAM marco in Core
 
 You don't need to do "Edit Halo", cause I have already written the command in process_3to10.cmd.
 
