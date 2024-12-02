@@ -74,6 +74,7 @@ Please check DRC and LVS on your terminal, I have already written down the comma
 source ./my_command/process_11to12.cmd
 ```
 Before Clock Tree Synthesis → Please check Setup Timing on your terminal(I have done the ECO → Optimize on file).
+
 **13. Clock Tree Synthesis (CTS)**
 
 **14. In-Place Optimization (IPO) - After CTS**
