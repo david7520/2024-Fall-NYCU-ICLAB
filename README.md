@@ -60,23 +60,7 @@ floorPlan -site core_5040 -r 1 0.60 100 100 100 100
 source ./my_command/process_3to10.cmd
 ```
 
-After Verify DRC, it should like:
-
-<div align=center>
-<img src=image/DRC.png>
-</div>
-
-Verify LVS:
-
-```bash
-set_verify_drc_mode -area {0 0 0 0}
-verifyConnectivity -net {GND VCC} -type special -error 1000 -warning 50
-```
-> Manually fixing the error, and running LVS again. After fixing all error, it should like:
-
-<div align=center>
-<img src=image/LVS.png>
-</div>
+Please check DRC and LVS on your terminal, I have already written down the command in process_3to10.cmd.
 
 **11. Place Standard Cells**
 
@@ -86,12 +70,6 @@ verifyConnectivity -net {GND VCC} -type special -error 1000 -warning 50
 source ./my_command/process_11to12.cmd
 ```
 
-> It should like:
-
-<div align=center>
-<img src=image/preCTS.png>
-</div>
-
 **13. Clock Tree Synthesis (CTS)**
 
 **14. In-Place Optimization (IPO) - After CTS**
@@ -100,92 +78,36 @@ source ./my_command/process_11to12.cmd
 source ./my_command/process_13to14.cmd
 ```
 
-> It should like (All DRVS should be 0 & setup and hold violating paths is 0):
-
-<div align=center>
-<img src=image/postCTS.png>
-</div>
-
 **15. Add PAD Filler**
-
-```bash
-source ./my_command/addIOFiller.cmd
-```
 
 **16. SI-Prevention Detail Route (NanoRoute)**
 
 > I have changed the EndIteration to 100 (default is 1): setNanoRouteMode -quiet -drouteEndIteration 100
 
 ```bash
-source ./my_command/nanoRoute.cmd
+source ./my_command/process_15to16.cmd
 ```
+Please check DRC and LVS by yourself.
 
-LVS:
 
-```bash
-verifyConnectivity -type all -error 1000 -warning 50
-```
-
-If there is error in LVS, `shift + t` to cancel the error
-
-DRC:
-
-```bash
-source ./my_command/postRouteDRC.cmd
-```
-
-If there is error in DRC, manually remove the metal that caused the violation.
 
 **17. In-Place Optimization (consider crosstalk effects) - After NanoRoute**
 
 ```bash
-source ./my_command/postRouteIPO.cmd
+source ./my_command/process_17.cmd
 ```
 
-If the timing slack is `negative`, or there are DRVs, perform post-Route IPO in `ECO -> Optimize Design` for Hold and Setup.
-
-After performing `ECO Optimize Design`, if the slack is still negative, congratulation... `reduce the utilization` or `increase the cycle time` and then `run all the procedure again`.
-
-> The file in 05_APR:
-
-<div align=center>
-<img src=image/directory.png>
-</div>
-
-> It should like (All DRVS should be 0 & setup and hold violating paths is 0):
-
-<div align=center>
-<img src=image/postRoute_setup.png>
-</div>
-
-<div align=center>
-<img src=image/postRoute_hold.png>
-</div>
 
 **18. Timing Analysis (Signoff) - Optional**
 
-```bash
-source ./my_command/signOff.cmd
-```
+
 
 **19. Add CORE Filler Cells (Just select the filler without C)**
 
 **20. Stream Out and Write Netlist**
 
 ```bash
-source ./my_command/streamOut.cmd
+source ./my_command/process_19to20.cmd
 ```
-
-## How to pass this Lab?
-
-> like I mention in **17. In-Place Optimization (consider crosstalk effects) - After NanoRoute**
-
-<div align=center>
-<img src=image/pass.png>
-</div>
-
-## Memory file name
-
-> Should follow this naming rule...
-
-`xxx_WC.db` `xxx.v` `xxx_WC.lib` `xxx_BC.lib` `xxx.lef`
+# === Area Report ===
+You can check Area in summaryReport.rpt file.
