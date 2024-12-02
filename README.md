@@ -32,13 +32,12 @@ source ./my_command/run_apr.cmd
 
 **3. Specify Chip Floorplan**
 
-```bash
-floorPlan -site core_5040 -r 1 0.60 100 100 100 100
-```
-> Specify core size
+1. Specify core size
 > :a. Core Utilization: Set any as your wish (0.7~0.8 is suggested)
-> 3. Specify core margin
+2. Specify core margin
 > manually place the SRAM marco in Core
+
+You don't need to do "Edit Halo", cause I have already written the command in process_3to10.cmd.
 
 **4. Connect / Define Global Net**
 
@@ -54,7 +53,7 @@ floorPlan -site core_5040 -r 1 0.60 100 100 100 100
 
 **10. Verify DRC and LVS**
 
-> For process 3 to 10's DRC, run:
+> For process 3 to 10's, run:
 
 ```bash
 source ./my_command/process_3to10.cmd
