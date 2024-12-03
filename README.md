@@ -1,23 +1,9 @@
 # 2024-Fall-NYCU-ICLAB
 Lab11
-## Some Notice & Reference
-
-TA forgot to link some file, we first need to relink the relative file (`filelist.f` & `PATTERN.v` & `TESTBED.v`)
-
-[APR](https://timsnote.wordpress.com/digital-ic-design/ic-compiler/)
-
-Don't forget to change the content in LEF file:
-
-`Memory.lef`: 
-
-`ME1 -> metal1`  `ME2 -> metal2` ... and so on
-            
-`VI1 -> via`     `VI2 -> via2`   ... and so on
-
-`core -> core_5040`
 
 ## (Automatic Placement & Route) APR's procedure
-
+**1. Memory lef file modification**
+Modify all the Memory.lef file
 **2. Data Preparation**
 
 > please run “./00_combine” to combine the TMIP_SYN.v with CHIP_SHELL.v to be CHIP_SYN.v
@@ -27,9 +13,14 @@ Invoke innovus
 **2. Reading Cell library information and Netlist for APR**
 
 ```bash
-source ./my_command/run_apr.cmd
+./01_setenv
 ```
-
+```bash
+innovus
+```
+```bash
+source ./cmd/apr_setting.cmd
+```
 **3. Specify Chip Floorplan**
 
 1. Specify core size
