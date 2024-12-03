@@ -1,4 +1,4 @@
-setMultiCpuUsage -localCpu 16 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
+setMultiCpuUsage -localCpu 32 -cpuPerRemoteHost 1 -remoteHost 0 -keepLicense true
 
 #====================================================================
 #   17. In-Place Optimization (consider crosstalk effects)
