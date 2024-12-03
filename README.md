@@ -3,6 +3,7 @@ Lab11
 
 ## (Automatic Placement & Route) APR's procedure
 **1. Memory lef file modification**
+
 Modify all the Memory.lef file
 
 **2. Data Preparation**
