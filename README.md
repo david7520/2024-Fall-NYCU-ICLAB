@@ -4,6 +4,7 @@ Lab11
 ## (Automatic Placement & Route) APR's procedure
 **1. Memory lef file modification**
 Modify all the Memory.lef file
+
 **2. Data Preparation**
 
 > please run “./00_combine” to combine the TMIP_SYN.v with CHIP_SHELL.v to be CHIP_SYN.v
