@@ -95,6 +95,7 @@ Please check DRC and LVS by yourself.
 source ./my_command/process_17.cmd
 ```
 
+Please check again DRVs, Setup and Hold Time on your terminal(I have done the ECO → Optimize on file).
 
 **18. Timing Analysis (Signoff) - Optional**
 
