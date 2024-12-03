@@ -65,7 +65,7 @@ Please check DRC and LVS on your terminal, I have already written down the comma
 ```bash
 source ./my_command/process_11to12.cmd
 ```
-Before Clock Tree Synthesis → Please check Setup Time on your terminal(I have done the ECO → Optimize on file).
+Before Clock Tree Synthesis → Please check Setup Time on your terminal (I have done the ECO → Optimize on file).
 
 **13. Clock Tree Synthesis (CTS)**
 
