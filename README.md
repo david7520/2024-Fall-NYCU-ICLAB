@@ -10,7 +10,6 @@ Modify all the Memory.lef file
 
 > please run “./00_combine” to combine the TMIP_SYN.v with CHIP_SHELL.v to be CHIP_SYN.v
 
-Invoke innovus
 
 **2. Reading Cell library information and Netlist for APR**
 
