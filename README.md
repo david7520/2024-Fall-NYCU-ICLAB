@@ -74,7 +74,7 @@ Before Clock Tree Synthesis → Please check Setup Time on your terminal (I have
 ```bash
 source ./my_command/process_13to14.cmd
 ```
-Please check DRVS, Setup and Hold Time on your terminal(I have done the ECO → Optimize on file).
+Please check DRVs, Setup and Hold Time on your terminal(I have done the ECO → Optimize on file).
 **15. Add PAD Filler**
 
 **16. SI-Prevention Detail Route (NanoRoute)**
