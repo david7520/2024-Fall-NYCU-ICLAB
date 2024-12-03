@@ -32,7 +32,7 @@ Core to Left: 100 /
 Core to Right: 100 / 
 Core to Top: 100 / 
 Core to Bottom: 100
-3. manually place the SRAM marco in Core
+3. Manually place the SRAM marco in Core.
 
 4. You don't need to do "Edit Halo", cause I have already written the command in process_3to10.cmd.
 
