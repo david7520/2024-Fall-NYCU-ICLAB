@@ -74,7 +74,7 @@ Before Clock Tree Synthesis → Please check Setup Time on your terminal (I have
 ```bash
 source ./my_command/process_13to14.cmd
 ```
-Please check DRVs, Setup and Hold Time on your terminal(I have done the ECO → Optimize on file).
+Please check DRVs, Setup and Hold Time on your terminal (I have done the ECO → Optimize on file).
 
 **15. Add PAD Filler**
 
@@ -95,7 +95,7 @@ Please check DRC and LVS by yourself.
 source ./my_command/process_17.cmd
 ```
 
-Please check again DRVs, Setup and Hold Time on your terminal(I have done the ECO → Optimize on file).
+Please check again DRVs, Setup and Hold Time on your terminal (I have done the ECO → Optimize on file).
 
 **18. Timing Analysis (Signoff) - Optional**
 
